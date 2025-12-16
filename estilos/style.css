@@ -2,7 +2,106 @@
 
  /* 
     Paleta de Cores
-    verde: #43a09d
+    verde: #49a09d
     Lilás: #5f2c82
                     */
 
+ * {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+ }
+
+ body,html {
+   background-color: #5f2c82;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ main {
+   position: relative;
+   height: 100vh;
+   width: 100vw;
+ }
+
+ section#login{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   overflow: hidden;
+
+   background-color: white;
+   width: 250px;
+   height: 500px;
+   border-radius: 20px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+
+   transition: width .3s, heigh .3s;
+   transition-timing-function: ease;
+ }
+
+ section#login > div#imagem {
+   display: block;
+   background: #5f2c82 url(../imagens/istockphoto-2043823329-2048x2048.jpg);
+   background-size: cover;
+   background-position: left bottom;
+   background-repeat: no-repeat;
+   height: 200px;
+ }
+
+ section#login > div#formulario {
+   display: block;
+   padding: 10px;
+ }
+
+ /* Medias Querries */
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+
+   body{
+      background-image: linear-gradient(to top, #49a09d, #5f2c82);
+   }
+
+    section#login {
+        width: 90vw;
+    }
+
+    section#login > div#imagem {
+        float: left;
+        width: 45%;
+        height: 100%;
+        background-image: url(../imagens/istockrecorte.jpg);
+        background-position: center right;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 55%;
+    }
+}
+
+
+
+@media screen and (min-width: 992px) {
+
+   body{
+      background-image: linear-gradient(to top, #49a09d, #5f2c82);
+   }
+
+   section#login {
+      width: 990px;
+   }
+
+   section#login > div#imagem {
+      float: left;
+      width: 50%;
+      height: 100%;
+   }
+
+    section#login > div#formulario {
+      float: right;
+      width: 50%;
+    }
+}
